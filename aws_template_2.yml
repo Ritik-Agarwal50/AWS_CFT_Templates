@@ -1,0 +1,22 @@
+# @format
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: This will create a VPC with a single public subnet
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      InstanceTenancy: default
+      Tags:
+        - Key: Name
+          Value: MyVPC
+  PublicSubnet:
+    Type: AWS::VPC::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: PublicSubnet
