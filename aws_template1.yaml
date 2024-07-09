@@ -1,6 +1,7 @@
-AWSTemplateFormatVersion: '2010-09-09'
-Description: 'This will create a VPC with a single public subnet'
+# @format
+
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "This will create a EC2 instance"
 Resources:
   EC2:
     Type: AWS::EC2::Instance
-    
