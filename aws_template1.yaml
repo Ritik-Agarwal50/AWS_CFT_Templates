@@ -1,0 +1,6 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'This will create a VPC with a single public subnet'
+Resources:
+  EC2:
+    Type: AWS::EC2::Instance
+    
